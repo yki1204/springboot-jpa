@@ -28,7 +28,7 @@ public class Sample2Controller {
 	
 	@GetMapping("/infomation/{name}")
 	public Result retrieveInfomation(@PathVariable String name) {
-		
+		 
 		return null;
 	}
 	
