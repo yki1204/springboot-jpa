@@ -34,9 +34,11 @@ public class Sample3Service {
 					.name(member.getName())
 					.age(member.getAge())
 					.company(member.getCompany())
-					//.companyId(member.getCompany().getId())
-					//.CompanyNm(member.getCompany().getName())
+
 					.build();
+			
+			memberDto.setCompanyId(memberDto.getCompany().getId());
+			memberDto.setCompanyNm(memberDto.getCompany().getName());
 			resultList.add(memberDto);
 			
 			System.out.println("***************************** 데이터 : " + memberDto);

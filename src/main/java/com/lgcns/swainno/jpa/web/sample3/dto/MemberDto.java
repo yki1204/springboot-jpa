@@ -18,8 +18,8 @@ public class MemberDto {
 	private long id;
 	private String name;
 	private int age;
-	//private long companyId;
-	//private String companyNm;
+	private long companyId;
+	private String companyNm;
 	private CompanyE company;
 	
 	public MemberE toEntity() {
@@ -41,8 +41,8 @@ public class MemberDto {
 		this.name = name;
 		this.age = age;
 		this.company = company;
-		//this.companyId = company.getId();
-		//this.companyNm = company.getName();
+		this.companyId = company.getId();
+		this.companyNm = company.getName();
 		
 	}
 
