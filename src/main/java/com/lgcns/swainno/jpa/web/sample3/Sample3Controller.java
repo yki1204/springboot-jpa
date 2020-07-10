@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lgcns.swainno.jpa.web.sample1.entity.Member;
 import com.lgcns.swainno.jpa.web.sample3.dto.*;
 import com.lgcns.swainno.jpa.web.sample3.entity.*;
 import com.lgcns.swainno.jpa.web.sample3.service.Sample3Service;
@@ -27,7 +28,10 @@ public class Sample3Controller {
 	private Sample3Service sample3service;
 	
 	@Autowired
-	private Sample3Repository sample3Repository;
+	private MemberERepository memberRepository;
+	
+	@Autowired
+	private CompanyERepository companyRepository;
 	
 	public Sample3Controller(Sample3Service sample3service) {
 		this.sample3service = sample3service;
@@ -38,16 +42,13 @@ public class Sample3Controller {
 		return null;
 	}
 	
-	@GetMapping("/post")
-	public String retrListCustInfo() {
-		return null;
-	}
 	
-	@PostMapping("/post")
-	public long retrListMemberInfo(MemberDto member) {
+	@GetMapping("/memberList")
+	public List<MemberDto> getMembers() throws Exception{
 		
-		//sample3service.retrListMemberInfo(member);
-		return sample3service.retrListMemberInfo(member);
+		List<MemberDto> memgerList = sample3service.retrListMemberInfo();
+		
+		return memgerList;
 	}
 	
 		

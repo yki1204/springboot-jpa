@@ -10,7 +10,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "member")
 public class MemberE {
@@ -26,8 +28,8 @@ public class MemberE {
 	@Column(name = "age")
 	private int age;
 	
-	//@Column(name = "company_id")
-	//private long companyId;
+//	@Column(name = "company_id")
+//	private long companyId;
 	
 	@ManyToOne
 	@JoinColumn(name = "company_id")
@@ -49,6 +51,11 @@ public class MemberE {
 		return company;
 	}
 	
+//	public long getCompanyId() {
+//		return companyId;
+//	}
+
+
 	@Builder
 	public MemberE(long id, String name,int age, CompanyE company) {
 		
