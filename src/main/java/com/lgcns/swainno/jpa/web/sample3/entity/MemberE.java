@@ -1,3 +1,8 @@
+/***
+ * @name : Member Entity
+ * @path : com.lgcns.swainno.jpa.web.sample3.entity.MemberE.java
+ * @description : member 테이블 정보를 관리하기 위한 클래스
+ */
 package com.lgcns.swainno.jpa.web.sample3.entity;
 
 import javax.persistence.Column;
@@ -28,9 +33,6 @@ public class MemberE {
 	@Column(name = "age")
 	private int age;
 	
-//	@Column(name = "company_id")
-//	private long companyId;
-	
 	@ManyToOne
 	@JoinColumn(name = "company_id")
 	private CompanyE company;
@@ -51,11 +53,13 @@ public class MemberE {
 		return company;
 	}
 	
-//	public long getCompanyId() {
-//		return companyId;
-//	}
-
-
+	/**
+	 * Builder 어노테이션으로 setter를 제공
+	 * @param id
+	 * @param name
+	 * @param age
+	 * @param company
+	 */
 	@Builder
 	public MemberE(long id, String name,int age, CompanyE company) {
 		

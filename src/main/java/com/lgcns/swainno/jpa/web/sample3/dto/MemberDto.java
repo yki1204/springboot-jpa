@@ -1,3 +1,8 @@
+/***
+ * @name : MemberDto
+ * @path : com.lgcns.swainno.jpa.web.sample3.dto.MemberDto.java
+ * @description : Controller와 Service 사이의 매개가 되는 member에 대한 Dto 클래스
+ */
 package com.lgcns.swainno.jpa.web.sample3.dto;
 
 import com.lgcns.swainno.jpa.web.sample3.entity.CompanyE;
@@ -44,13 +49,7 @@ public class MemberDto {
 		this.companyId = company.getId();
 		this.companyNm = company.getName();
 		
-	}
-
-	
-	
-	
-
-	
+	}	
 }
 
 

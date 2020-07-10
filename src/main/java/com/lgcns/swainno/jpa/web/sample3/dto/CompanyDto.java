@@ -1,3 +1,8 @@
+/***
+ * @name : CompanyDto
+ * @path : com.lgcns.swainno.jpa.web.sample3.dto.CompanyDto.java
+ * @description : Controller와 Service 사이의 매개가 되는 Company에 대한 Dto 클래스
+ */
 package com.lgcns.swainno.jpa.web.sample3.dto;
 
 import com.lgcns.swainno.jpa.web.sample3.entity.CompanyE;
