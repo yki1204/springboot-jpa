@@ -6,8 +6,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+
 @Entity
 @Table(name = "member")
+@Getter
 public class Member {
 	
 	@Id
@@ -20,21 +23,5 @@ public class Member {
 	@ManyToOne
 	@JoinColumn(name = "company_id")
 	private Company company;
-
-	public long getId() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public Company getCompany() {
-		return company;
-	}
 	
 }

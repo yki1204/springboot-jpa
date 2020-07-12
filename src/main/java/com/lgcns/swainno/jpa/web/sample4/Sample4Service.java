@@ -36,8 +36,5 @@ public class Sample4Service {
 						).collect(Collectors.toList());
 		
 		return memberDTOList;
-	}
-	
-	
-
+	}	
 }
